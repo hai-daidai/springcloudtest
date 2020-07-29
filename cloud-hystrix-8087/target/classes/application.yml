@@ -1,0 +1,11 @@
+server:
+  port: 8087
+spring:
+  application:
+    name: cloudhystrix8087
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/

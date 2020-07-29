@@ -1,0 +1,9 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: zookeep-xiaofei
+  cloud:
+    zookeeper:
+      connect-string: 192.168.43.128

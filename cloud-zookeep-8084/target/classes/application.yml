@@ -1,0 +1,9 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: cloudzookeeper8084
+  cloud:
+    zookeeper:
+      connect-string: 192.168.43.128 #连接zookeeper

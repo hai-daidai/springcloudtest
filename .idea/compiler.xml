@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-consultg-8085" />
+        <module name="cloud-consulxf-8086" />
+        <module name="cloud-dashbo-9001" />
+        <module name="cloud-eureka7001" />
+        <module name="cloud-eureka7002" />
+        <module name="cloud-feign-80" />
+        <module name="cloud-feign-hystrix-comsumer8088" />
+        <module name="cloud-gateway-9527" />
+        <module name="cloud-hystrix-8087" />
+        <module name="cloud-xiaofei-80" />
+        <module name="cloud-zookeep-8084" />
+        <module name="cloud-zookeep-xiaofei8083" />
+        <module name="cloudapicommon" />
+        <module name="common-api" />
+        <module name="springcloud-8081" />
+        <module name="springcloud-8082" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-api-common" target="1.8" />
+      <module name="cloud-eureka" target="1.8" />
+      <module name="cloudapicommon" target="1.8" />
+      <module name="spring-cloud-8081" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-cloud-8081" options="-parameters" />
+    </option>
+  </component>
+</project>

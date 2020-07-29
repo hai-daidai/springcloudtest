@@ -1,0 +1,16 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: cloud-eureka7001
+eureka:
+  instance: eureka7001
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/
+#server:
+      #    #enable-self-preservation: false #自我保护默认是开启  现在是手动关闭
+      #    #eviction-interval-timer-in-ms: 2000 #逐出间隔时间 毫秒
