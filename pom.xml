@@ -24,6 +24,9 @@
         <module>cloud-feign-hystrix-comsumer8088</module>
         <module>cloud-dashbo-9001</module>
         <module>cloud-gateway-9527</module>
+      <module>cloud-config-3344</module>
+        <module>cloud-confg-3355</module>
+        <module>cloud-config-3366</module>
     </modules>
   <!--版本统一控制-->
     <properties>

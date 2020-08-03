@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:3344
+      name: config
+      profile: dev
+      label: master
+
+#提高网络曝光度
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

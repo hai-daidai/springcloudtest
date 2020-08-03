@@ -1,0 +1,40 @@
+server:
+  port: 3344
+eureka:
+  instance:
+    hostname: cloud_config
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7002/eureka/ #注册的具体路径
+
+spring:
+  application:
+    name: cloud_config3344
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com.cnpmjs.org/hai-daidai/spring-cloud-test.git
+          search-paths: spring-cloud-test # 配置文件所属目录，配置文件不能放在仓库的根目录
+          username: 3041068291@qq.com
+          password: lovewh911206
+      label: master  #可选的git标签（默认为“master”）
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoint:
+    shutdown:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"
+
+
+

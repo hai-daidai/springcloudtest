@@ -1,0 +1,17 @@
+server:
+  port: 3355
+
+eureka:
+  instance:
+    hostname: cloud_config3355
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7002/eureka/ #注册的具体路径
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
