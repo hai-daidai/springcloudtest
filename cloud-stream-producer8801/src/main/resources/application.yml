@@ -1,0 +1,35 @@
+server:
+  port: 8801
+
+spring:
+  application:
+    name: producer8801
+  cloud:
+    stream: # 流
+      binders: #粘合剂
+        defaultRabbit:
+          type: rabbit
+        environment: # 设置rabbitmq的相关的环境配置
+          spring:
+            rabbitmq:
+              host: localhost
+              port: 5672
+              username: guest
+              password: guest
+      bindings: #绑定 服务的整合处理
+        output:
+          destination: myExchange # 目的
+          contenet-type: application/json
+          binder: defaultRabbit
+
+eureka:
+  instance:
+    hostname: cloud_stream8801
+    lease-renewal-interval-in-seconds: 2 # lease:租约  renewal：租约  interval：间隔
+    lease-expiration-duration-in-seconds: 5 # lease:租约  expiration：期满  duration：持续时长
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7002/eureka/ #注册的具体路径
+

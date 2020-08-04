@@ -27,6 +27,9 @@
       <module>cloud-config-3344</module>
         <module>cloud-confg-3355</module>
         <module>cloud-config-3366</module>
+        <module>cloud-stream-producer8801</module>
+        <module>cloud-stream-consumer8802</module>
+        <module>cloud-stream-consumer8803</module>
     </modules>
   <!--版本统一控制-->
     <properties>

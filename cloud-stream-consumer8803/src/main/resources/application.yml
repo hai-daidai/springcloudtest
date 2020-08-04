@@ -1,0 +1,33 @@
+server:
+  port: 8803
+eureka:
+  instance:
+    hostname: stream_consumer8803
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 5
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7002/eureka/ #注册的具体路径
+spring:
+  application:
+    name: stream_consumer8803
+  cloud:
+    stream:
+      binders:
+        defaultRabbit:
+          type: rabbit
+        environment: # 设置rabbitmq的相关的环境配置
+          spring:
+            rabbitmq:
+              host: localhost
+              port: 5672
+              username: guest
+              password: guest
+      bindings: #绑定
+        input:
+          destination: myExchange # 目的
+          contenet-type: application/json
+          binder: defaultRabbit
+          group: exchangea
