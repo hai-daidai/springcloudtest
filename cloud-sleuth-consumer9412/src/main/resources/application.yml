@@ -1,0 +1,22 @@
+server:
+  port: 9413
+
+spring:
+  application:
+    name: sleuth-consumer9413
+  zipkin: #追踪
+    base-url: http://localhost:9411/  #追踪路径  就是
+  sleuth:
+    sampler: #抓取
+      probability: 1 #可行性 最大值1  设置为1 表示所有路径都抓取到
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7002.com:7002/eureka/
+  instance:
+    hostname: consumer9413
+    prefer-ip-address: true #开启前缀
+    instance-id: sleuth-consumer #实例名称
+

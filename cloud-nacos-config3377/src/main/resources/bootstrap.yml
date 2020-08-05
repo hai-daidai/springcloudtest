@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: nacos-config
+  cloud:
+    nacos:
+      discovery:  #发现nacos
+        server-addr: 127.0.0.1:8848
+      config: #配置nacos
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        group: DEV_GROUP #配置分组名称
+        namespace: 60b522ca-3352-4a79-85ef-09f86ab7e3fc #选择不同的命名空间
+
